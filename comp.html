@@ -53,38 +53,57 @@
                     </div>
                     <div class="modal-body">
                         <div class="col-6 float-start">
-                            <label for="" class="form-label">Kategoriya</label>
-                            <select name="Category" id="Category" class="w-100">
-                                <option value="">---</option>
+                            <label for="Category" class="form-label">Kategoriya</label>
+                            <select name="Category" id="Category" class="w-100 mb-3 form-control">
+                               
                                 <option value="acer">acer</option>
+                                <option value="">---</option>
                                 <option value="hp">hp</option>
                                 <option value="asus">asus</option>
                                 <option value="dell">dell</option>
                                 <option value="lenovo">lenovo</option>
                             </select>
-                            <label for="" class="form-label">Ad</label>
-                            <input type="text" class="w-100">
-                            <label for="" class="form-label">qiymet</label>
-                            <input type="text" class="w-100">
-                            <label for="" class="form-label">tesvir</label>
-                            <input type="text" class="w-100">
-                            <label for="" class="form-label">yeni:</label>
-                            <select name="y/x" class="w-100" id="yeni">
-                                <option value=""></option>
+                            <label for="ad" class="form-label">Ad</label>
+                            <input type="text" id="ad" value="acer" class="w-100 mb-3 form-control">
+                            <label for="qiymet" class="form-label">qiymet</label>
+                            <input type="text" id="qiymet" value="789" class="w-100 mb-3 form-control">
+                            <label for="tesvir" class="form-label">tesvir</label>
+                            <input type="text" id="tesvir" value="cox yaxsi maldir" class="w-100 mb-3 form-control">
+                            <label for="yeni" class="form-label">yeni:</label>
+                            <select name="y/x" class="w-100 mb-3 form-control" id="yeni">
                                 <option value="yeni">yeni</option>
+                                <option value="">---</option>
                                 <option value="xeyr">xeyr</option>
                             </select>
-                            <input type="text" class="w-100">
-                            <div class="image"></div>
+                            <label for="link" class="form-label">sekil link ile</label>
+                            <input type="text" class="w-100 mb-3 form-control" value="link" id="link">
+
                         </div>
                         <div class="col-6 float-end ">
-                            <label for="" class="form-label">Emeli yaddas</label>
-                            <input type="text" class="w-100">
+                            <label for="emeli" class="form-label">Emeli yaddas</label>
+                            <input type="text" value="12" class="w-100 mb-3 form-control" id="emeli">
+
+                            <label for="merkezi" class="form-label">merkezi prosessor</label>
+                            <input type="text" value="i9" class="w-100 mb-3 form-control" id="merkezi">
+
+                            <label for="daimi" class="form-label">daimi yaddas (GB)</label>
+                            <input type="text" value="250" class="w-100 mb-3 form-control" id="daimi">
+
+                            <label for="daimitip" class="form-label">daimi yaddas tipi:</label>
+                            <input type="text" value="hdd" class="w-100 mb-3 form-control" id="daimitip">
+
+                            <label for="emeliyyat" class="form-label">emeliyyat sistemi</label>
+                            <input type="text" value="w10" class="w-100 mb-3 form-control" id="emeliyyat">
+
+                            <label for="video" class="form-label">video kart(gb)</label>
+                            <input type="text" value="12" class="w-100 mb-3 form-control" id="video">
+
+
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" id="save" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
@@ -101,7 +120,10 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="a">
+
+        </tbody>
+        <tbody id="b">
 
         </tbody>
     </table>

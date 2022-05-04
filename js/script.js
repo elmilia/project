@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("#pc").removeClass("d-none");
     $("#in").addClass("d-none")
     }else{
-
+$("#in").removeClass("d-none")
     }
     $("#log").click(function(){
         $("#log").addClass("d-none");
