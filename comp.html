@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <meta http-equiv="refresh" content="10"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
@@ -27,6 +28,19 @@
             border-width: 1px;
         }
 
+        tr button {
+            color: #fff;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            border-radius: 3px;
+            margin-left: 30%;
+        }
+
+        tr td {
+            border: 1px solid;
+            text-align: center;
+        }
+
         tbody {
             border: 1px solid;
         }
@@ -36,12 +50,15 @@
 <body>
     <div class="header d-flex">
         <form action="index.html">
-            <button class="btn btn-warning m-2">Əsas səhifəyə geri dönmək</button>
+            <button class="btn btn-warning m-2 p-2">Əsas səhifəyə geri dönmək</button>
         </form>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary m-2 p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
             yeni komputer
         </button>
+        <input type="text" id="form" class="mb-2 w-25 form-control"
+            placeholder="silmek istediyivizin idsini yazin ve idler 0-dan baslayir">
+        <button type="button" id="duzel" class="btn btn-danger m-2 p-2">sil</button>
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,7 +72,7 @@
                         <div class="col-6 float-start">
                             <label for="Category" class="form-label">Kategoriya</label>
                             <select name="Category" id="Category" class="w-100 mb-3 form-control">
-                               
+
                                 <option value="acer">acer</option>
                                 <option value="">---</option>
                                 <option value="hp">hp</option>
@@ -116,14 +133,11 @@
                 <th>Ad</th>
                 <th>sekil</th>
                 <th>Mebleg</th>
-                <th>emeliyyatlar</th>
+                <th>emeliyyat</th>
                 <th></th>
             </tr>
         </thead>
         <tbody id="a">
-
-        </tbody>
-        <tbody id="b">
 
         </tbody>
     </table>

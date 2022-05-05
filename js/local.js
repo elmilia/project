@@ -9,6 +9,22 @@ $(document).ready(function () {
         if (yer == 2 && yer2 == 6) {
             cavab = true;
         }
+        
+        isValid($("#username"))
+        isValid($("#nomer"))
+        isValid($("#mail"))
+        isValid($("#password"))
+        function isValid(element) {
+            if (element.val() == "") {
+                element.addClass("is-invalid");
+                localStorage.setItem("ugur", "ugursuz")
+                element.removeClass("is-valid");
+            } else {
+                element.removeClass("is-invalid");
+                localStorage.setItem("ugur", "ugurlu")
+                element.addClass("is-valid");
+            }
+        }
         if (cavab == true) {
             i = Number(localStorage.getItem("say")) + 1;
             localStorage.setItem(`user${i}-name`, $("#username").val());

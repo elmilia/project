@@ -1,22 +1,23 @@
 $(document).ready(function () {
     if (localStorage.getItem("ugur") == "ugurlu") {
-        for (var i = 1; i <= localStorage.getItem("i"); i++) {
+        for (var i = 2; i <= localStorage.getItem("i"); i++) {
             var tr = document.createElement("tr");
             var td1 = document.createElement("td");
             var td2=document.createElement("td");
             var td3 = document.createElement("td");
             var td4 = document.createElement("td");
-            var td5 = document.createElement("td");
+            var btn = document.createElement("button");
             td1.innerText = i;
             td2.innerText=localStorage.getItem(`${i-1}-ad`)
             td3.innerText=localStorage.getItem(`${i-1}-link`)
             td4.innerText=localStorage.getItem(`${i-1}-qiymet`)
-            td5.innerText=localStorage.getItem(`${i-1}-emeliyyat`)
+            localStorage.setItem("btn",i)
+            btn.innerText="Redakte et";
             tr.appendChild(td1);
             tr.appendChild(td2);
             tr.appendChild(td3)
             tr.appendChild(td4)
-            tr.appendChild(td5)
+            tr.appendChild(btn)
             document.querySelector("#table1 #a").appendChild(tr)
 
 
@@ -31,7 +32,33 @@ $(document).ready(function () {
         i = 1;
         localStorage.setItem("i", i)
     }
+    $("#table1 button").click(function(){
+        vpn=localStorage.getItem("btn");
+        
+    });
+$("#duzel").click(function(){
+var a=$("#form").val();
+var c=typeof Number(a);
+console.log(c)
+if(c=="number"){
+    var b=document.querySelectorAll("#table1 #a tr");
+    // localStorage.removeItem(`${a}-kat`);
+    //         localStorage.removeItem(`${a}-ad`);
+    //         localStorage.removeItem(`${a}-qiymet` );
+    //         localStorage.removeItem(`${a}-tesvir` );
+    //         localStorage.removeItem(`${a}-yeni`);
+    //         localStorage.removeItem(`${a}-link`);
+    //         localStorage.removeItem(`${a}-emeli`)
+    //         localStorage.removeItem(`${a}-merkezi`)
+    //         localStorage.removeItem(`${a}-daimi`)
+    //         localStorage.removeItem(`${a}-daimi tip`)
+    //         localStorage.removeItem(`${a}-emeliyyat`)
+    //         localStorage.removeItem(`${a}-video`)
+            b[a].remove()
+            localStorage.setItem("i",Number(localStorage.getItem("i"))-1)
+}
 
+});
     $("#save").click(function () {
         // $("#ad").isInvalid();
         isValid($("#qiymet"))
@@ -62,7 +89,7 @@ $(document).ready(function () {
             localStorage.setItem(`${i}-emeliyyat`, $("#emeliyyat").val())
             localStorage.setItem(`${i}-video`, $("#video").val())
             localStorage.setItem(`i`, i + 1);
-
+alert("komputerlerim hissesine baxdiqda zehmet olmasa  sehifeni yenileyin")
         } else {
             alert("zehmet olmasa xanalari doldurun")
         }
