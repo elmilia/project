@@ -28,6 +28,13 @@
         .category .item:last-child {
             border: none;
         }
+
+        #second {
+            background-image: url(images/bg/paper.gif);
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            height: 400px;
+        }
     </style>
 </head>
 
@@ -36,48 +43,17 @@
         <button class="btn btn-warning m-2">Əsas səhifəyə geri dönmək</button>
     </form>
     <div class="content">
-        <div class="col-3 float-start">
+        <div class="col-3 float-start" id="first">
             <input type="text" name="search" id="search" placeholder="marka axtarin">
             <ul class="category">
-                <li class="item">Acer</li>
+                <li class="item" id="a">Acer</li>
                 <li class="item">asus</li>
                 <li class="item">dell</li>
                 <li class="item">Hp</li>
                 <li class="item">Lenovo</li>
             </ul>
         </div>
-        <div class="col-9 float-end">
-            <div class="stock">
-
-            </div>
-            <!-- <div class="card" style="width: 18rem;">
-                <img src="images/acer.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Acer</h5>
-                    <p class="card-text">qiymet:332</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        etrafli
-                    </button>
-                </div>
-            </div>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">acer</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            qiymet:332 <br>
-                            model:acer a31h <br>
-                            ceki:1,3kq <br>
-
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+        <div class="col-9 float-end" id="second">
         </div>
     </div>
 
